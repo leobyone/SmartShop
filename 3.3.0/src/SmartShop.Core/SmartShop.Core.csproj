@@ -179,6 +179,35 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\CookieHelper.cs" />
+    <Compile Include="Common\Encrypt.cs" />
+    <Compile Include="Common\Utility.cs" />
+    <Compile Include="Entities\Area\Area.cs" />
+    <Compile Include="Entities\ArticleClass\ArticleClass.cs" />
+    <Compile Include="Entities\Article\Article.cs" />
+    <Compile Include="Entities\Case\Case.cs" />
+    <Compile Include="Entities\Group\Group.cs" />
+    <Compile Include="Entities\HelpCatalog\HelpCatalog.cs" />
+    <Compile Include="Entities\HelpDetail\HelpDetail.cs" />
+    <Compile Include="Entities\Member\Asset.cs" />
+    <Compile Include="Entities\Member\Member.cs" />
+    <Compile Include="Entities\MicroAlbumPhoto\MicroAlbumPhoto.cs" />
+    <Compile Include="Entities\MicroAlbum\MicroAlbum.cs" />
+    <Compile Include="Entities\MicroCoupon\MicroCoupon.cs" />
+    <Compile Include="Entities\MicroSite\MicroSite.cs" />
+    <Compile Include="Entities\PhoneValid\PhoneValid.cs" />
+    <Compile Include="Entities\PhoneValid\ValidType.cs" />
+    <Compile Include="Entities\QRcode\QRcode.cs" />
+    <Compile Include="Entities\ResultMessage\ResultMessage.cs" />
+    <Compile Include="Entities\ServiceReserve\ServiceReserve.cs" />
+    <Compile Include="Entities\ShopCart\ShopCart.cs" />
+    <Compile Include="Entities\ShopOrderDealRecord\ShopOrderDealRecord.cs" />
+    <Compile Include="Entities\ShopOrderItem\ShopOrderItem.cs" />
+    <Compile Include="Entities\ShopOrder\ShopOrder.cs" />
+    <Compile Include="Entities\ShopPayOrder\ShopPayOrder.cs" />
+    <Compile Include="Entities\ShopProductClass\ShopProductClass.cs" />
+    <Compile Include="Entities\ShopProduct\ShopProduct.cs" />
+    <Compile Include="Entities\SmsResult\SmsResult.cs" />
     <Compile Include="SmartShopConsts.cs" />
     <Compile Include="SmartShopCoreModule.cs" />
     <Compile Include="AppVersionHelper.cs" />
