@@ -59,5 +59,9 @@
     
     <text name="ShopProductClass" value="产品分类" />
     <text name="ShopProductManage" value="产品管理" />
+    <text name="ClassName" value="分类名称" />
+    <text name="Description" value="描述" />
+    <text name="DisplayOrder" value="排序" />
+    <text name="Actions" value="操作" />
   </texts>
 </localizationDictionary>

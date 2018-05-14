@@ -8,62 +8,62 @@
 
 			function getShopProductClasses() {
 				shopProductClassService.getAllShopProductClasses({}).then(function (result) {
-					vm.shopProductClasses = result.data.items;
+					vm.shopProductClasses = result.data.shopProductClasses;
 				});
 			}
 
-			//vm.openUserCreationModal = function () {
-			//	var modalInstance = $uibModal.open({
-			//		templateUrl: '/App/Main/views/users/createModal.cshtml',
-			//		controller: 'app.views.users.createModal as vm',
-			//		backdrop: 'static'
-			//	});
+			vm.openShopProductClassCreationModal = function () {
+                var modalInstance = $uibModal.open({
+                    templateUrl: '/App/Main/views/shopproductclass/createModal.cshtml',
+                    controller: 'app.views.shopproductclass.createModal as vm',
+                    backdrop: 'static'
+                });
 
-			//	modalInstance.rendered.then(function () {
-			//		$.AdminBSB.input.activate();
-			//	});
+                modalInstance.rendered.then(function () {
+                    $.AdminBSB.input.activate();
+                });
 
-			//	modalInstance.result.then(function () {
-			//		getUsers();
-			//	});
-			//};
+                modalInstance.result.then(function () {
+                    getShopProductClasses();
+                });
+            };
 
-			//vm.openUserEditModal = function (user) {
-			//	var modalInstance = $uibModal.open({
-			//		templateUrl: '/App/Main/views/users/editModal.cshtml',
-			//		controller: 'app.views.users.editModal as vm',
-			//		backdrop: 'static',
-			//		resolve: {
-			//			id: function () {
-			//				return user.id;
-			//			}
-			//		}
-			//	});
+            vm.openShopProductClassEditModal = function (shopProductClass) {
+                var modalInstance = $uibModal.open({
+                    templateUrl: '/App/Main/views/shopproductclass/editModal.cshtml',
+                    controller: 'app.views.shopproductclass.editModal as vm',
+                    backdrop: 'static',
+                    resolve: {
+                        id: function () {
+                            return user.id;
+                        }
+                    }
+                });
 
-			//	modalInstance.rendered.then(function () {
-			//		$timeout(function () {
-			//			$.AdminBSB.input.activate();
-			//		}, 0);
-			//	});
+                modalInstance.rendered.then(function () {
+                    $timeout(function () {
+                        $.AdminBSB.input.activate();
+                    }, 0);
+                });
 
-			//	modalInstance.result.then(function () {
-			//		getUsers();
-			//	});
-			//};
+                modalInstance.result.then(function () {
+                    getShopProductClasses();
+                });
+            };
 
-			//vm.delete = function (user) {
-			//	abp.message.confirm(
-			//		"Delete user '" + user.userName + "'?",
-			//		function (result) {
-			//			if (result) {
-			//				userService.delete({ id: user.id })
-			//					.then(function () {
-			//						abp.notify.info("Deleted user: " + user.userName);
-			//						getShopProductClasses();
-			//					});
-			//			}
-			//		});
-			//}
+            vm.delete = function (shopProductClass) {
+                abp.message.confirm(
+                    "Delete shopProductClass '" + shopProductClass.className + "'?",
+                    function (result) {
+                        if (result) {
+							shopProductClassService.deleteShopProductClass({ id: shopProductClass.id })
+                                .then(function () {
+                                    abp.notify.info("Deleted shopProductClass: " + shopProductClass.className);
+                                    getShopProductClasses();
+                                });
+                        }
+                    });
+            }
 
 			vm.refresh = function () {
 				getShopProductClasses();

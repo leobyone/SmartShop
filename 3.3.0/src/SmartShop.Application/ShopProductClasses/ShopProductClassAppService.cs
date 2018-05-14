@@ -1,5 +1,8 @@
-﻿using Abp.AutoMapper;
+﻿using Abp.Application.Services.Dto;
+using Abp.Authorization;
+using Abp.AutoMapper;
 using Abp.Domain.Repositories;
+using SmartShop.Authorization;
 using SmartShop.Entities;
 using SmartShop.ShopProductClasses.Dtos;
 using System;
@@ -27,6 +30,29 @@ namespace SmartShop.ShopProductClasses
 			{
 				ShopProductClasses = shopProductClasses.MapTo<List<ShopProductClassDto>>()
 			};
+		}
+
+		public async Task<CreateShopProductClassDto> Create(CreateShopProductClassDto input)
+		{
+			var entity = ObjectMapper.Map<ShopProductClass>(input);
+
+			entity = await _shopProductClassRepository.InsertAsync(entity);
+
+			return entity.MapTo<CreateShopProductClassDto>();
+		}
+
+		public async Task Update(ShopProductClassDto input)
+		{
+			var entity = await _shopProductClassRepository.GetAsync(input.Id);
+
+			input.MapTo(entity);
+
+			await _shopProductClassRepository.UpdateAsync(entity);
+		}
+
+		public async Task DeleteShopProductClass(EntityDto<int> input)
+		{
+			await _shopProductClassRepository.DeleteAsync(input.Id);
 		}
 	}
 }

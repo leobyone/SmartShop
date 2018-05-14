@@ -185,6 +185,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ShopProductClasses\Dtos\CreateShopProductClassDto.cs" />
     <Compile Include="ShopProductClasses\Dtos\GetAllShopProductClassOutput.cs" />
     <Compile Include="ShopProductClasses\Dtos\ShopProductClassDto.cs" />
     <Compile Include="ShopProductClasses\IShopProductClassAppService.cs" />
