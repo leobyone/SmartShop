@@ -11,7 +11,12 @@
                 createMenuItem(App.localize("Tenants"), "Pages.Tenants", "business", "tenants"),
                 createMenuItem(App.localize("Users"), "Pages.Users", "people", "users"),
                 createMenuItem(App.localize("Roles"), "Pages.Roles", "local_offer", "roles"),
-                createMenuItem(App.localize("About"), "", "info", "about"),
+				createMenuItem(App.localize("About"), "", "info", "about"),
+				createMenuItem(App.localize("Test"), "", "info", "test"),
+
+				createMenuItem(App.localize("ShopProductManage"), "", "menu", "", [
+					createMenuItem(App.localize("ShopProductClass"), "", "info", "shopproductclass")
+				]),
 
                 createMenuItem(App.localize("MultiLevelMenu"), "", "menu", "", [
                     createMenuItem("ASP.NET Boilerplate", "", "", "", [

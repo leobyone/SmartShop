@@ -200,6 +200,7 @@
     <Compile Include="Entities\QRcode\QRcode.cs" />
     <Compile Include="Entities\ResultMessage\ResultMessage.cs" />
     <Compile Include="Entities\ServiceReserve\ServiceReserve.cs" />
+    <Compile Include="Entities\ShopCart\IShopCartRepository.cs" />
     <Compile Include="Entities\ShopCart\ShopCart.cs" />
     <Compile Include="Entities\ShopOrderDealRecord\ShopOrderDealRecord.cs" />
     <Compile Include="Entities\ShopOrderItem\ShopOrderItem.cs" />
@@ -240,7 +241,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Localization\Source\SmartShop-zh-CN.xml" />
+    <EmbeddedResource Include="Localization\Source\SmartShop-zh-CN.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Localization\Source\SmartShop-tr.xml" />
     <EmbeddedResource Include="Localization\Source\SmartShop.xml" />
     <EmbeddedResource Include="Localization\Source\SmartShop-lt.xml" />

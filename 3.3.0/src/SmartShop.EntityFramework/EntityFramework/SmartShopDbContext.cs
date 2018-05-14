@@ -11,6 +11,9 @@ namespace SmartShop.EntityFramework
     public class SmartShopDbContext : AbpZeroDbContext<Tenant, Role, User>
     {
 		//TODO: Define an IDbSet for your Entities...
+
+		#region 实体映射到数据库中的表
+
 		public virtual IDbSet<Area> Areas { get; set; }
 		public virtual IDbSet<ArticleClass> ArticleClasses { get; set; }
 		public virtual IDbSet<Article> Articles { get; set; }
@@ -32,6 +35,8 @@ namespace SmartShop.EntityFramework
 		public virtual IDbSet<ShopPayOrder> ShopPayOrders { get; set; }
 		public virtual IDbSet<ShopProduct> ShopProducts { get; set; }
 		public virtual IDbSet<ShopProductClass> ShopProductClasses { get; set; }
+
+		#endregion
 
 		/* NOTE: 
          *   Setting "Default" to base class helps us when working migration commands on Package Manager Console.

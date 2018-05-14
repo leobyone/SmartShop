@@ -14,49 +14,49 @@ namespace SmartShop.Web
     {
         public override void SetNavigation(INavigationProviderContext context)
         {
-            context.Manager.MainMenu
-                .AddItem(
-                    new MenuItemDefinition(
-                        "Home",
-                        new LocalizableString("HomePage", SmartShopConsts.LocalizationSourceName),
-                        url: "#/",
-                        icon: "fa fa-home",
-                        requiresAuthentication: true
-                        )
-                ).AddItem(
-                    new MenuItemDefinition(
-                        "Tenants",
-                        L("Tenants"),
-                        url: "#tenants",
-                        icon: "fa fa-globe",
-                        requiredPermissionName: PermissionNames.Pages_Tenants
-                        )
-                ).AddItem(
-                    new MenuItemDefinition(
-                        "Users",
-                        L("Users"),
-                        url: "#users",
-                        icon: "fa fa-users",
-                        requiredPermissionName: PermissionNames.Pages_Users
-                        )
-                ).AddItem(
-                    new MenuItemDefinition(
-                        "Roles",
-                        L("Roles"),
-                        url: "#users",
-                        icon: "fa fa-tag",
-                        requiredPermissionName: PermissionNames.Pages_Roles
-                    )
-                )
-                .AddItem(
-                    new MenuItemDefinition(
-                        "About",
-                        new LocalizableString("About", SmartShopConsts.LocalizationSourceName),
-                        url: "#/about",
-                        icon: "fa fa-info"
-                        )
-                );
-        }
+			context.Manager.MainMenu
+				.AddItem(
+					new MenuItemDefinition(
+						"Home",
+						new LocalizableString("HomePage", SmartShopConsts.LocalizationSourceName),
+						url: "#/",
+						icon: "fa fa-home",
+						requiresAuthentication: true
+						)
+				).AddItem(
+					new MenuItemDefinition(
+						"Tenants",
+						L("Tenants"),
+						url: "#tenants",
+						icon: "fa fa-globe",
+						requiredPermissionName: PermissionNames.Pages_Tenants
+						)
+				).AddItem(
+					new MenuItemDefinition(
+						"Users",
+						L("Users"),
+						url: "#users",
+						icon: "fa fa-users",
+						requiredPermissionName: PermissionNames.Pages_Users
+						)
+				).AddItem(
+					new MenuItemDefinition(
+						"Roles",
+						L("Roles"),
+						url: "#users",
+						icon: "fa fa-tag",
+						requiredPermissionName: PermissionNames.Pages_Roles
+					)
+				)
+				.AddItem(
+					new MenuItemDefinition(
+						"About",
+						new LocalizableString("About", SmartShopConsts.LocalizationSourceName),
+						url: "#/about",
+						icon: "fa fa-info"
+						)
+				);
+		}
 
         private static ILocalizableString L(string name)
         {

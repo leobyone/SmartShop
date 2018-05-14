@@ -60,7 +60,17 @@
                     url: '/about',
                     templateUrl: '/App/Main/views/about/about.cshtml',
                     menu: 'About' //Matches to name of 'About' menu in SmartShopNavigationProvider
-                });
+				})
+				.state('shopproductclass', {
+					url: '/shopproductclass',
+					templateUrl: '/App/Main/views/shopproductclass/index.cshtml',
+					menu: 'ShopProductClass' //Matches to name of 'About' menu in SmartShopNavigationProvider
+				})
+				.state('test', {
+					url: '/test',
+					templateUrl: '/App/Main/views/test/test.cshtml',
+					menu: 'Test' //Matches to name of 'About' menu in SmartShopNavigationProvider
+				});
         }
     ]);
 

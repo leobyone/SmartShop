@@ -185,6 +185,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ShopProductClasses\Dtos\GetAllShopProductClassOutput.cs" />
+    <Compile Include="ShopProductClasses\Dtos\ShopProductClassDto.cs" />
+    <Compile Include="ShopProductClasses\IShopProductClassAppService.cs" />
+    <Compile Include="ShopProductClasses\ShopProductClassAppService.cs" />
     <Compile Include="SmartShopApplicationModule.cs" />
     <Compile Include="SmartShopAppServiceBase.cs" />
     <Compile Include="Authorization\Accounts\AccountAppService.cs" />
