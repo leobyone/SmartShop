@@ -9,36 +9,8 @@ using System.Threading.Tasks;
 
 namespace SmartShop.ShopProductClasses.Dtos
 {
-	[AutoMapTo(typeof(ShopProductClass))]
 	public class CreateShopProductClassDto
 	{
-		/// <summary>
-		/// ClassName
-		/// </summary>
-		[Required]
-		public virtual string ClassName
-		{
-			get;
-			set;
-		}
-
-		/// <summary>
-		/// Description
-		/// </summary>
-		[Required]
-		public virtual string Description
-		{
-			get;
-			set;
-		}
-
-		/// <summary>
-		/// DisplayOrder
-		/// </summary>
-		public virtual int? DisplayOrder
-		{
-			get;
-			set;
-		}
+		public ShopProductClassDto ShopProductClass { get; set; }
 	}
 }

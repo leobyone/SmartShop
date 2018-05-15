@@ -22,6 +22,11 @@ namespace SmartShop.ShopProductClasses
 			_shopProductClassRepository = shopProductClassRepository;
 		}
 
+		public Task<PagedResultDto<GetAllShopProductClassOutput>> GetPagedShopProductClasses()
+		{
+			throw new NotImplementedException();
+		}
+
 		public async Task<GetAllShopProductClassOutput> GetAllShopProductClasses()
 		{
 			var shopProductClasses = await _shopProductClassRepository.GetAllListAsync();

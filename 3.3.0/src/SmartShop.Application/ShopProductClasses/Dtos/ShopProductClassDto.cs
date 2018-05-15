@@ -3,6 +3,7 @@ using Abp.AutoMapper;
 using SmartShop.Entities;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,8 @@ namespace SmartShop.ShopProductClasses.Dtos
 		/// <summary>
 		/// ClassName
 		/// </summary>
+		[Required]
+		[MaxLength(SmartShopConsts.MaxNameLength)]
 		public virtual string ClassName
 		{
 			get;
@@ -24,6 +27,8 @@ namespace SmartShop.ShopProductClasses.Dtos
 		/// <summary>
 		/// Description
 		/// </summary>
+		[Required]
+		[MaxLength(SmartShopConsts.MaxTextLength)]
 		public virtual string Description
 		{
 			get;

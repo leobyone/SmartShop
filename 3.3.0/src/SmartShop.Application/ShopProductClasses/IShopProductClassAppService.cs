@@ -13,6 +13,8 @@ namespace SmartShop.ShopProductClasses
 	{
 		Task<GetAllShopProductClassOutput> GetAllShopProductClasses();
 
+		Task<PagedResultDto<GetAllShopProductClassOutput>> GetPagedShopProductClasses();
+
 		Task<CreateShopProductClassDto> Create(CreateShopProductClassDto input);
 
 		Task Update(ShopProductClassDto input);

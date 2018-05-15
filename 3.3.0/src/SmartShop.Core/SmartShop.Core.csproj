@@ -185,6 +185,7 @@
     <Compile Include="Entities\Area\Area.cs" />
     <Compile Include="Entities\ArticleClass\ArticleClass.cs" />
     <Compile Include="Entities\Article\Article.cs" />
+    <Compile Include="Entities\Article\ArticleType.cs" />
     <Compile Include="Entities\Case\Case.cs" />
     <Compile Include="Entities\Group\Group.cs" />
     <Compile Include="Entities\HelpCatalog\HelpCatalog.cs" />

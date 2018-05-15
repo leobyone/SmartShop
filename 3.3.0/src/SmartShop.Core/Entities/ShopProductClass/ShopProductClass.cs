@@ -1,6 +1,7 @@
 ﻿using Abp.Domain.Entities;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,6 +34,8 @@ namespace SmartShop.Entities
 		/// <summary>
 		/// ClassName
 		/// </summary>
+		[Required]
+		[MaxLength(SmartShopConsts.MaxNameLength)]
 		public virtual string ClassName
 		{
 			get;
@@ -42,6 +45,8 @@ namespace SmartShop.Entities
 		/// <summary>
 		/// Description
 		/// </summary>
+		[Required]
+		[MaxLength(SmartShopConsts.MaxTextLength)]
 		public virtual string Description
 		{
 			get;
@@ -68,7 +73,9 @@ namespace SmartShop.Entities
 
 		public ShopProductClass()
 		{
-
+			this.CompanyId = 0;
+			this.ParentId = 0;
+			this.IsRemove = 0;
 		}
 	}
 }

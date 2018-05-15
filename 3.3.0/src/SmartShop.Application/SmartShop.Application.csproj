@@ -185,11 +185,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppConsts.cs" />
+    <Compile Include="Dto\PagedAndFilteredInputDto.cs" />
+    <Compile Include="Dto\PagedAndSortedInputDto.cs" />
+    <Compile Include="Dto\PagedInputDto.cs" />
+    <Compile Include="Dto\PagedSortedAndFilteredInputDto.cs" />
     <Compile Include="ShopProductClasses\Dtos\CreateShopProductClassDto.cs" />
     <Compile Include="ShopProductClasses\Dtos\GetAllShopProductClassOutput.cs" />
     <Compile Include="ShopProductClasses\Dtos\ShopProductClassDto.cs" />
     <Compile Include="ShopProductClasses\IShopProductClassAppService.cs" />
     <Compile Include="ShopProductClasses\ShopProductClassAppService.cs" />
+    <Compile Include="ShopProducts\Dtos\CreateOrUpdateShopProductInput.cs" />
+    <Compile Include="ShopProducts\Dtos\GetShopProductForEditOutput.cs" />
+    <Compile Include="ShopProducts\Dtos\GetShopProductsInput.cs" />
+    <Compile Include="ShopProducts\Dtos\LTMAutoMapper\CustomerShopProductMapper.cs" />
+    <Compile Include="ShopProducts\Dtos\ShopProductEditDto.cs" />
+    <Compile Include="ShopProducts\Dtos\ShopProductListDto.cs" />
+    <Compile Include="ShopProducts\IShopProductAppServices.cs" />
+    <Compile Include="ShopProducts\ShopProductAppServices.cs" />
     <Compile Include="SmartShopApplicationModule.cs" />
     <Compile Include="SmartShopAppServiceBase.cs" />
     <Compile Include="Authorization\Accounts\AccountAppService.cs" />
@@ -236,6 +249,7 @@
       <Name>SmartShop.Core</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

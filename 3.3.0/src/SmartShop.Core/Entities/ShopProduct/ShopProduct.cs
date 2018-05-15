@@ -283,7 +283,9 @@ namespace SmartShop.Entities
 
 		public ShopProduct()
 		{
-
+			this.CompanyId = 0;
+			this.CanCount = 0;
+			this.CreationTime = DateTime.Now;
 		}
 	}
 }
