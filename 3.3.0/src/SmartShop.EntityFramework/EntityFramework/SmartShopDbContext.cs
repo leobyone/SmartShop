@@ -1,5 +1,6 @@
 ﻿using System.Data.Common;
 using System.Data.Entity;
+using System.Diagnostics;
 using Abp.Zero.EntityFramework;
 using SmartShop.Authorization.Roles;
 using SmartShop.Authorization.Users;
@@ -46,7 +47,8 @@ namespace SmartShop.EntityFramework
 		public SmartShopDbContext()
             : base("Default")
         {
-
+			//调试时打印执行的sql到输出窗口
+			//Database.Log = sql => Debug.Write(sql);
         }
 
         /* NOTE:
@@ -56,20 +58,23 @@ namespace SmartShop.EntityFramework
         public SmartShopDbContext(string nameOrConnectionString)
             : base(nameOrConnectionString)
         {
-
-        }
+			//调试时打印执行的sql到输出窗口
+			//Database.Log = sql => Debug.Write(sql);
+		}
 
         //This constructor is used in tests
         public SmartShopDbContext(DbConnection existingConnection)
          : base(existingConnection, false)
         {
-
-        }
+			//调试时打印执行的sql到输出窗口
+			//Database.Log = sql => Debug.Write(sql);
+		}
 
         public SmartShopDbContext(DbConnection existingConnection, bool contextOwnsConnection)
          : base(existingConnection, contextOwnsConnection)
         {
-
-        }
+			//调试时打印执行的sql到输出窗口
+			//Database.Log = sql => Debug.Write(sql);
+		}
     }
 }

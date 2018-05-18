@@ -10,8 +10,11 @@ using System.Threading.Tasks;
 
 namespace SmartShop.ShopProductClasses.Dtos
 {
-	[AutoMapFrom(typeof(ShopProductClass))]
-	public class ShopProductClassDto : EntityDto
+	/// <summary>
+	/// ShopProductClassDto
+	/// </summary>
+	[AutoMap(typeof(ShopProductClass))]
+	public class ShopProductClassDto : EntityDto<int>
 	{
 		/// <summary>
 		/// ClassName

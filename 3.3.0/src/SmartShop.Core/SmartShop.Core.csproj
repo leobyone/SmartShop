@@ -210,6 +210,11 @@
     <Compile Include="Entities\ShopProductClass\ShopProductClass.cs" />
     <Compile Include="Entities\ShopProduct\ShopProduct.cs" />
     <Compile Include="Entities\SmsResult\SmsResult.cs" />
+    <Compile Include="ShopPayOrders\Authorization\ShopPayOrderAppAuthorizationProvider.cs" />
+    <Compile Include="ShopPayOrders\Authorization\ShopPayOrderAppPermissions.cs" />
+    <Compile Include="ShopPayOrders\DomainServices\IShopPayOrderManager.cs" />
+    <Compile Include="ShopPayOrders\DomainServices\ShopPayOrderManager.cs" />
+    <Compile Include="ShopPayOrders\ltmReadME.cs" />
     <Compile Include="SmartShopConsts.cs" />
     <Compile Include="SmartShopCoreModule.cs" />
     <Compile Include="AppVersionHelper.cs" />
@@ -233,6 +238,7 @@
     <Compile Include="Authorization\Users\User.cs" />
     <Compile Include="Authorization\Users\UserManager.cs" />
     <Compile Include="Authorization\Users\UserStore.cs" />
+    <Compile Include="SmartShopDomainServiceBase.cs" />
     <Compile Include="Validation\ValidationHelper.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -25,6 +25,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\SmartShop.Application.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -58,6 +59,12 @@
     </Reference>
     <Reference Include="Castle.Windsor, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
       <HintPath>..\packages\Castle.Windsor.4.1.0\lib\net45\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="JetBrains.Annotations, Version=11.1.0.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
       <HintPath>..\packages\JetBrains.Annotations.11.1.0\lib\net20\JetBrains.Annotations.dll</HintPath>
@@ -135,8 +142,8 @@
     </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.IO.Compression.FileSystem" />
-    <Reference Include="System.Linq.Dynamic.Core, Version=0.0.0.0, Culture=neutral, PublicKeyToken=0f07ec44de6ac832, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Linq.Dynamic.Core.1.0.8.2\lib\net46\System.Linq.Dynamic.Core.dll</HintPath>
+    <Reference Include="System.Linq.Dynamic, Version=1.0.6132.35681, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Dynamic.1.0.7\lib\net40\System.Linq.Dynamic.dll</HintPath>
     </Reference>
     <Reference Include="System.Net" />
     <Reference Include="System.Numerics" />
@@ -186,12 +193,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppConsts.cs" />
+    <Compile Include="Dto\FileDto.cs" />
     <Compile Include="Dto\PagedAndFilteredInputDto.cs" />
     <Compile Include="Dto\PagedAndSortedInputDto.cs" />
     <Compile Include="Dto\PagedInputDto.cs" />
     <Compile Include="Dto\PagedSortedAndFilteredInputDto.cs" />
-    <Compile Include="ShopProductClasses\Dtos\CreateShopProductClassDto.cs" />
+    <Compile Include="ShopPayOrders\Dtos\CreateOrUpdateShopPayOrderInput.cs" />
+    <Compile Include="ShopPayOrders\Dtos\GetShopPayOrderForEditOutput.cs" />
+    <Compile Include="ShopPayOrders\Dtos\GetShopPayOrdersInput.cs" />
+    <Compile Include="ShopPayOrders\Dtos\LTMAutoMapper\CustomerShopPayOrderMapper.cs" />
+    <Compile Include="ShopPayOrders\Dtos\ShopPayOrderEditDto.cs" />
+    <Compile Include="ShopPayOrders\Dtos\ShopPayOrderListDto.cs" />
+    <Compile Include="ShopPayOrders\IShopPayOrderAppServices.cs" />
+    <Compile Include="ShopPayOrders\ShopPayOrderAppServices.cs" />
+    <Compile Include="ShopProductClasses\Dtos\CreateOrUpdateShopProductClassInput.cs" />
     <Compile Include="ShopProductClasses\Dtos\GetAllShopProductClassOutput.cs" />
+    <Compile Include="ShopProductClasses\Dtos\GetShopProductClassesInput.cs" />
     <Compile Include="ShopProductClasses\Dtos\ShopProductClassDto.cs" />
     <Compile Include="ShopProductClasses\IShopProductClassAppService.cs" />
     <Compile Include="ShopProductClasses\ShopProductClassAppService.cs" />

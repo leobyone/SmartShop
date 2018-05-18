@@ -219,6 +219,10 @@
     <Compile Include="Migrations\201804280820597_add-tables.Designer.cs">
       <DependentUpon>201804280820597_add-tables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805180757435_update-tables.cs" />
+    <Compile Include="Migrations\201805180757435_update-tables.Designer.cs">
+      <DependentUpon>201805180757435_update-tables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="SmartShopDataModule.cs" />
@@ -256,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804280820597_add-tables.resx">
       <DependentUpon>201804280820597_add-tables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805180757435_update-tables.resx">
+      <DependentUpon>201805180757435_update-tables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

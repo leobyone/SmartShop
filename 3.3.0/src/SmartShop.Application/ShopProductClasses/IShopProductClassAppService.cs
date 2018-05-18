@@ -9,16 +9,50 @@ using System.Threading.Tasks;
 
 namespace SmartShop.ShopProductClasses
 {
+	/// <summary>
+	/// ShopProductClass的应用层服务的接口方法
+	/// </summary>
 	public interface IShopProductClassAppService : IApplicationService
 	{
+		/// <summary>
+		/// 根据id获取分类信息
+		/// </summary>
+		/// <param name="input"></param>
+		/// <returns></returns>
+		Task<ShopProductClassDto> GetShopProductClassByIdAsync(EntityDto<int> input);
+
+		/// <summary>
+		/// 获取全部的商品分类信息
+		/// </summary>
+		/// <returns></returns>
 		Task<GetAllShopProductClassOutput> GetAllShopProductClasses();
 
-		Task<PagedResultDto<GetAllShopProductClassOutput>> GetPagedShopProductClasses();
+		/// <summary>
+		/// 获取商品分类的分页信息
+		/// </summary>
+		/// <param name="input"></param>
+		/// <returns></returns>
+		Task<PagedResultDto<ShopProductClassDto>> GetPagedShopProductClasses(GetShopProductClassesInput input);
 
-		Task<CreateShopProductClassDto> Create(CreateShopProductClassDto input);
+		/// <summary>
+		/// 添加商品分类信息
+		/// </summary>
+		/// <param name="input"></param>
+		/// <returns></returns>
+		Task<CreateOrUpdateShopProductClassInput> CreateShopProductClass(CreateOrUpdateShopProductClassInput input);
 
-		Task Update(ShopProductClassDto input);
+		/// <summary>
+		/// 更新商品分类信息
+		/// </summary>
+		/// <param name="input"></param>
+		/// <returns></returns>
+		Task UpdateShopProductClass(CreateOrUpdateShopProductClassInput input);
 
+		/// <summary>
+		/// 删除商品分类信息
+		/// </summary>
+		/// <param name="input"></param>
+		/// <returns></returns>
 		Task DeleteShopProductClass(EntityDto<int> input);
 	}
 }
