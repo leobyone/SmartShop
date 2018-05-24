@@ -1,10 +1,9 @@
 ﻿(function () {
     var controllerId = 'app.views.layout';
-    angular.module('app').controller(controllerId, [
+	angular.module('app').controller(controllerId, [
         '$scope', '$timeout', function ($scope, $timeout) {
             var vm = this;
             //Layout logic...
-
 
             vm.activateLeftSideBar = function () {
                 $timeout(function () {

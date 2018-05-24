@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Abp.Application.Services.Dto;
 using Abp.AutoMapper;
 using Abp.Domain.Repositories;
+using Abp.Extensions;
 using Abp.Linq.Extensions;
 using SmartShop.Entities;
 using SmartShop.ShopProductClasses.Dtos;
@@ -35,10 +36,14 @@ namespace SmartShop.ShopProductClasses
 		/// <returns></returns>
 		public async Task<PagedResultDto<ShopProductClassDto>> GetPagedShopProductClasses(GetShopProductClassesInput input)
 		{
-			var query = _shopProductClassRepository.GetAll();
+			//初步过滤
+			var query = _shopProductClassRepository.GetAll()
+				.WhereIf(!input.Filter.IsNullOrEmpty(), t=>t.ClassName.Contains(input.Filter));
 
+			//获取总数
 			var shopProductClassCount = await query.CountAsync();
 
+			//ABP提供了扩展方法PageBy分页方式
 			var shopProductClasses = await query
 				.OrderBy(input.Sorting).AsNoTracking()
 				.PageBy(input)
@@ -68,13 +73,13 @@ namespace SmartShop.ShopProductClasses
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		public async Task<CreateOrUpdateShopProductClassInput> CreateShopProductClass(CreateOrUpdateShopProductClassInput input)
+		public async Task<CreateShopProductClassInput> CreateShopProductClass(CreateShopProductClassInput input)
 		{
 			var entity = ObjectMapper.Map<ShopProductClass>(input);
 
 			entity = await _shopProductClassRepository.InsertAsync(entity);
 
-			return entity.MapTo<CreateOrUpdateShopProductClassInput>();
+			return entity.MapTo<CreateShopProductClassInput>();
 		}
 
 		/// <summary>
@@ -82,9 +87,9 @@ namespace SmartShop.ShopProductClasses
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		public async Task UpdateShopProductClass(CreateOrUpdateShopProductClassInput input)
+		public async Task UpdateShopProductClass(UpdateShopProductClassInput input)
 		{
-			var entity = await _shopProductClassRepository.GetAsync(input.Id.Value);
+			var entity = await _shopProductClassRepository.GetAsync(input.Id);
 
 			input.MapTo(entity);
 

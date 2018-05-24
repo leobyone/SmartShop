@@ -28,7 +28,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr ng-repeat="shopProductClass in shopProductClasses | limitTo:maxResultCount">
+						<tr ng-repeat="shopProductClass in shopProductClasses | limitTo:paginationConf.itemsPerPage">
 							<td>{{shopProductClass.className}}</td>
 							<td>{{shopProductClass.description}}</td>
 							<td>{{shopProductClass.displayOrder}}</td>
@@ -47,15 +47,10 @@
 				<button type="button" data-toggle="modal" class="btn btn-primary btn-circle waves-effect waves-circle waves-float pull-right" ng-click="openShopProductClassCreationModal()">
 					<i class="material-icons">add</i>
 				</button>
-				<div class="am-cf">
-					共 {{totalCount}} 条记录/当前第 {{currentPage+1}} 页 共 {{pages}} 页
-					<div class="am-fr">
-						<ul class="am-pagination">
-							<li><a href="javascript:;" ng-click="prevPage()">«</a></li>
-							<li><a href="javascript:;" ng-click="nextPage()">»</a></li>
-						</ul>
-					</div>
+				<div ng-if="paginationConf.totalItems>paginationConf.itemsPerPage">
+					<tm-pagination conf="paginationConf"></tm-pagination>
 				</div>
 			</div>
+		</div>
 	</div>
 </div>

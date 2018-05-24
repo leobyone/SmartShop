@@ -206,10 +206,11 @@
     <Compile Include="ShopPayOrders\Dtos\ShopPayOrderListDto.cs" />
     <Compile Include="ShopPayOrders\IShopPayOrderAppServices.cs" />
     <Compile Include="ShopPayOrders\ShopPayOrderAppServices.cs" />
-    <Compile Include="ShopProductClasses\Dtos\CreateOrUpdateShopProductClassInput.cs" />
+    <Compile Include="ShopProductClasses\Dtos\CreateShopProductClassInput.cs" />
     <Compile Include="ShopProductClasses\Dtos\GetAllShopProductClassOutput.cs" />
     <Compile Include="ShopProductClasses\Dtos\GetShopProductClassesInput.cs" />
     <Compile Include="ShopProductClasses\Dtos\ShopProductClassDto.cs" />
+    <Compile Include="ShopProductClasses\Dtos\UpdateShopProductClassInput.cs" />
     <Compile Include="ShopProductClasses\IShopProductClassAppService.cs" />
     <Compile Include="ShopProductClasses\ShopProductClassAppService.cs" />
     <Compile Include="ShopProducts\Dtos\CreateOrUpdateShopProductInput.cs" />

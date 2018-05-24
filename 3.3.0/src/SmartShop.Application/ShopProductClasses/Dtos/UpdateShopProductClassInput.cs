@@ -1,5 +1,4 @@
-﻿using Abp.AutoMapper;
-using SmartShop.Entities;
+﻿using Abp.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -10,19 +9,10 @@ using System.Threading.Tasks;
 namespace SmartShop.ShopProductClasses.Dtos
 {
 	/// <summary>
-	/// CreateShopProductClassInput
+	/// UpdateShopProductClassInput
 	/// </summary>
-	public class CreateOrUpdateShopProductClassInput
+	public class UpdateShopProductClassInput: Entity<int>
 	{
-		/// <summary>
-		/// Id
-		/// </summary>
-		public virtual int? Id
-		{
-			get;
-			set;
-		}
-
 		/// <summary>
 		/// ClassName
 		/// </summary>

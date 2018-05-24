@@ -12,7 +12,7 @@
 
 			vm.save = function () {
 				abp.ui.setBusy();
-				shopProductClassService.create(vm.shopProductClass)
+				shopProductClassService.createShopProductClass(vm.shopProductClass)
 					.then(function () {
 						abp.notify.info(App.localize('SavedSuccessfully'));
 						$uibModalInstance.close();

@@ -21,7 +21,7 @@ namespace SmartShop.Web
                     .Include("~/lib/animate.css/animate.css", new CssRewriteUrlTransform())
                     .Include("~/css/materialize.css", new CssRewriteUrlTransform())
                     .Include("~/css/style.css", new CssRewriteUrlTransform())
-                    .Include("~/Views/Account/_Layout.css", new CssRewriteUrlTransform())
+					.Include("~/Views/Account/_Layout.css", new CssRewriteUrlTransform())
             );
 
             bundles.Add(
@@ -46,7 +46,7 @@ namespace SmartShop.Web
                         "~/Abp/Framework/scripts/libs/abp.sweet-alert.js",
                         "~/js/admin.js",
                         "~/js/main.js"
-                    )
+					)
             );
 
             //VENDOR RESOURCES
@@ -106,7 +106,7 @@ namespace SmartShop.Web
                         "~/js/admin.js",
                         "~/Scripts/jquery.signalR-2.2.3.min.js",
                         "~/js/main.js"
-                    )
+					)
                 );
 
             //Home-Index Bundles

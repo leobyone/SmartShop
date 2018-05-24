@@ -39,14 +39,14 @@ namespace SmartShop.ShopProductClasses
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		Task<CreateOrUpdateShopProductClassInput> CreateShopProductClass(CreateOrUpdateShopProductClassInput input);
+		Task<CreateShopProductClassInput> CreateShopProductClass(CreateShopProductClassInput input);
 
 		/// <summary>
 		/// 更新商品分类信息
 		/// </summary>
 		/// <param name="input"></param>
 		/// <returns></returns>
-		Task UpdateShopProductClass(CreateOrUpdateShopProductClassInput input);
+		Task UpdateShopProductClass(UpdateShopProductClassInput input);
 
 		/// <summary>
 		/// 删除商品分类信息
