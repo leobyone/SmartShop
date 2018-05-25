@@ -62,7 +62,7 @@
 					backdrop: 'static',
 					resolve: {
 						id: function () {
-							return user.id;
+							return shopProductClass.id;
 						}
 					}
 				});

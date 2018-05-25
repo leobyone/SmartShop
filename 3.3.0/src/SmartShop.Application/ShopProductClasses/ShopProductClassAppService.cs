@@ -117,5 +117,17 @@ namespace SmartShop.ShopProductClasses
 
 			return entity.MapTo<ShopProductClassDto>();
 		}
+
+		/// <summary>
+		/// GetShopProductById
+		/// </summary>
+		/// <param name="id"></param>
+		/// <returns></returns>
+		public ShopProductClassDto GetShopProductById(int id)
+		{
+			var entity = _shopProductClassRepository.Get(id);
+
+			return entity.MapTo<ShopProductClassDto>();
+		}
 	}
 }

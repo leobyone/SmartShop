@@ -1,4 +1,6 @@
-﻿using Abp.Domain.Entities;
+﻿using Abp.AutoMapper;
+using Abp.Domain.Entities;
+using SmartShop.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -11,6 +13,7 @@ namespace SmartShop.ShopProductClasses.Dtos
 	/// <summary>
 	/// UpdateShopProductClassInput
 	/// </summary>
+	[AutoMapTo(typeof(ShopProductClass))]
 	public class UpdateShopProductClassInput: Entity<int>
 	{
 		/// <summary>

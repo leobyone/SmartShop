@@ -15,6 +15,13 @@ namespace SmartShop.ShopProductClasses
 	public interface IShopProductClassAppService : IApplicationService
 	{
 		/// <summary>
+		/// GetShopProductById
+		/// </summary>
+		/// <param name="id"></param>
+		/// <returns></returns>
+		ShopProductClassDto GetShopProductById(int id);
+
+		/// <summary>
 		/// 根据id获取分类信息
 		/// </summary>
 		/// <param name="input"></param>

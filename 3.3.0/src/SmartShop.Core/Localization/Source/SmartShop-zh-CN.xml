@@ -56,9 +56,11 @@
     <text name="No" value="否" />
     <text name="Optional" value="可选的" />
     <text name="Roles" value="角色" />
-    
-    <text name="ShopProductClass" value="产品分类" />
+
     <text name="ShopProductManage" value="产品管理" />
+    <text name="ShopProductClass" value="产品分类" />
+    <text name="CreateNewShopProductClass" value="创建产品分类" />
+    <text name="EditShopProductClass" value="编辑产品分类" />
     <text name="ClassName" value="分类名称" />
     <text name="Description" value="描述" />
     <text name="DisplayOrder" value="排序" />

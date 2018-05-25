@@ -12,6 +12,7 @@ namespace SmartShop.ShopProductClasses.Dtos
 	/// <summary>
 	/// CreateShopProductClassInput
 	/// </summary>
+	[AutoMapTo(typeof(ShopProductClass))]
 	public class CreateShopProductClassInput
 	{
 		/// <summary>
